@@ -3,8 +3,8 @@ package Classes;
 public abstract class Jidkost {
 
     // Плотности жидкостей кг/м3
-    private int plotnost;
-    private String name;
+    private final int plotnost;
+    private final String name;
     private double litr;
     private double kg;
 

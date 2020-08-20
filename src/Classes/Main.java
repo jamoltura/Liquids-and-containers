@@ -8,8 +8,10 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // Создание массив емкость
         List<Capacities> capacities  = new ArrayList<>();
 
+        // запонения массив с жикости
         Random random = new Random();
         int count = 5;
         for (int i = 0; i < count; i++) {
@@ -20,6 +22,7 @@ public class Main {
             }
         }
 
+        // Сортируем массив
         capacities.sort(sort);
 
         String[] str = {"Тип ёмкости", "Высота(см)", "Ширина(см)", "Длина(см)", "Объем(см3)", "Тип жидкости", "Кг", "Литр"};
@@ -29,6 +32,8 @@ public class Main {
         String[] str2 = {"____________", "__________", "__________", "__________", "____________________", "______________", "__________", "__________"};
 
         System.out.printf(s, str2);
+
+        // Выводим на консол
         for (int i = 0; i < count; i++) {
             capacities.get(i).getParametrs();
             System.out.printf(s, str2);
@@ -36,5 +41,6 @@ public class Main {
 
     }
 
-    public static Comparator<Capacities> sort = (obj1, obj2) -> (Double.compare(obj2.getVolume(), obj1.getVolume()));
+    // Метод для сортировка по массе жидкости
+    public static Comparator<Capacities> sort = (obj1, obj2) -> (Double.compare(obj2.jidkost.getKg(), obj1.jidkost.getKg()));
 }

@@ -20,10 +20,13 @@ public abstract class Capacities {
         return name;
     }
 
+    // Абстракт метод для парвметры
     protected abstract void setParametrs();
 
+    // Абстракт метод для вывода параметрв в консол
     protected abstract void getParametrs();
 
+    // Создания жидкости
     public void initJidkost(){
         Random rand = new Random();
         switch (rand.nextInt(3)) {
@@ -33,6 +36,7 @@ public abstract class Capacities {
         }
     }
 
+    // Получим случайные число
     protected double getRand(){
         Random random = new Random();
         return (random.nextInt(5000) + 100) / 100.0;

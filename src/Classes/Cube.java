@@ -14,7 +14,7 @@ public class Cube extends Capacities {
 
 
     public Cube() {
-        super("Cube");
+        super("Цилиндр");
     }
 
     @Override

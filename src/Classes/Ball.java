@@ -9,7 +9,7 @@ public class Ball extends Capacities {
     private double radius;
 
     public Ball() {
-        super("Ball");
+        super("Шар");
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Ball extends Capacities {
 
     @Override
     public void getParametrs() {
-        String s = "%13s|Радиус    :%21.2f|%20.2f|%14s|%10.2f|%10.2f|\n";
+        String s = "%13s|Радиус :   %21.2f|%20.2f|%14s|%10.2f|%10.2f|\n";
         System.out.printf(s, getName(), + getRadius(), getVolume(), getJidkost().getName(), getJidkost().getKg(), getJidkost().getLitr());
     }
 
