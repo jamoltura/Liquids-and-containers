@@ -35,7 +35,7 @@ public class Cube extends Capacities {
 
     @Override
     public void getParametrs() {
-        String s = "%13s|%10.2f|%10.2f|%10.2f|%20.4f|%14s|%10.2f|%10.2f|\n";
+        String s = "%13s|%10.2f|%10.2f|%10.2f|%20.2f|%14s|%10.2f|%10.2f|\n";
         System.out.printf(s, getName(), getHeight() ,getWidth(), getDepth(), getVolume(), getJidkost().getName(), getJidkost().getKg(), getJidkost().getLitr());
     }
 

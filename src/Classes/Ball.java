@@ -21,7 +21,7 @@ public class Ball extends Capacities {
 
         radius = Double.parseDouble(decimalFormat.format(getRand()));
 
-        volume = Double.parseDouble(decimalFormat.format(((Math.pow(radius, 3) * 1000000.0) / 750000.0) * Math.PI));
+        volume = Double.parseDouble(decimalFormat.format((Math.pow(radius, 3) / 0.75) * Math.PI));
 
         getJidkost().volume(volume);
     }

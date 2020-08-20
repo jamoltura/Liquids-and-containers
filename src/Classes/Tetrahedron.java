@@ -28,7 +28,7 @@ public class Tetrahedron extends Capacities {
 
     @Override
     public void getParametrs() {
-        String s = "%13s|Радиус    :%21.2f|%20.2f|%14s|%10.2f|%10.2f|\n";
+        String s = "%13s|Ребро     :%21.2f|%20.2f|%14s|%10.2f|%10.2f|\n";
         System.out.printf(s, getName(), getRebro(), getVolume(), getJidkost().getName(), getJidkost().getKg(), getJidkost().getLitr());
     }
 

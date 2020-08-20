@@ -35,7 +35,7 @@ public abstract class Capacities {
 
     protected double getRand(){
         Random random = new Random();
-        return random.nextInt(50) + 10;
+        return (random.nextInt(5000) + 100) / 100.0;
     }
 
     public String getName() {
