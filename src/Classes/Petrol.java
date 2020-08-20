@@ -1,15 +1,9 @@
 package Classes;
 
-import Enums.TipJidkost;
-
 public class Petrol extends Jidkost{
 
     public Petrol() {
-        super(TipJidkost.PETROL);
+        super(740, "Petrol");
     }
 
-    @Override
-    public int volume() {
-        return 0;
-    }
 }

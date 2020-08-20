@@ -1,18 +1,19 @@
 package Classes;
 
-import Enums.TipCapacities;
-import Enums.TipJidkost;
-
 import java.util.Random;
 
 public abstract class Capacities {
-    private TipCapacities tipCapacities;
-    private String name;
-    private Jidkost jidkost;
 
-    public Capacities(TipCapacities tipCapacities, String name) {
-        this.tipCapacities = tipCapacities;
+    private String name;
+    protected Jidkost jidkost;
+
+    // значения в сантиметр/куб
+    protected double volume;
+
+    public Capacities(String name) {
         this.name = name;
+        initJidkost();
+        setParametrs();
     }
 
     public String toString(){
@@ -21,12 +22,31 @@ public abstract class Capacities {
 
     protected abstract void setParametrs();
 
+    protected abstract void getParametrs();
+
     public void initJidkost(){
-        Random rand = new Random(3);
-        switch (rand.nextInt()){
-            case 1: this.jidkost = new Alcohol();
-            case 2: this.jidkost = new Water();
-            case 3: this.jidkost = new Petrol();
+        Random rand = new Random();
+        switch (rand.nextInt(3)) {
+            case 0 -> this.jidkost = new Alcohol();
+            case 1 -> this.jidkost = new Water();
+            case 2 -> this.jidkost = new Petrol();
         }
+    }
+
+    protected double getRand(){
+        Random random = new Random();
+        return random.nextInt(50) + 10;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getVolume() {
+        return volume;
+    }
+
+    public Jidkost getJidkost() {
+        return jidkost;
     }
 }

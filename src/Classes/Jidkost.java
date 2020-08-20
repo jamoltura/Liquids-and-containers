@@ -1,51 +1,37 @@
 package Classes;
 
-import Enums.TipJidkost;
-
 public abstract class Jidkost {
 
-    private TipJidkost tipJidkost;
+    // Плотности жидкостей кг/м3
     private int plotnost;
     private String name;
-    private int litr;
+    private double litr;
+    private double kg;
 
-    public Jidkost(TipJidkost tipJidkost) {
-        this.tipJidkost = tipJidkost;
-        switch (tipJidkost){
-            case ALCOHOL -> {
-                plotnost = 789;
-                name = "Alcohol";
-            }
-            case WATER -> {
-                plotnost = 997;
-                name = "Water";
-            }
-            case PETROL -> {
-                plotnost = 740;
-                name = "Petrol";
-            }
-        }
+    public Jidkost(int plotnost, String name) {
+        this.plotnost = plotnost;
+        this.name = name;
     }
 
     public String toString(){
         return name;
     }
 
-    public abstract int volume();
-
-    public TipJidkost getTipJidkost() {
-        return tipJidkost;
-    }
-
-    public int getPlotnost() {
-        return plotnost;
+    // кг/см3 литр/см3        пареметр value в см3
+    public void volume(double value){
+        kg = plotnost * value / 1000000;
+        litr = value / 1000;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getLitr() {
+    public double getLitr() {
         return litr;
+    }
+
+    public double getKg() {
+        return kg;
     }
 }
